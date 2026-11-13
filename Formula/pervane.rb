@@ -1,8 +1,8 @@
 class Pervane < Formula
   desc "Open-source fan control for macOS: curves, profiles, auto-switch rules"
   homepage "https://github.com/tuncasoftbildik/pervane"
-  url "https://github.com/tuncasoftbildik/pervane/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "3529366df0c96741ba4ac6814fae08eb7c74837b4ddbe9ccb62d2fb981c6bda6"
+  url "https://github.com/tuncasoftbildik/pervane/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "c8782d70318a2613c5ea621f8dc106ccff5ad4ae97a07425d2d9ff92c2b03425"
   license "MIT"
 
   depends_on xcode: ["15.0", :build]
@@ -19,6 +19,7 @@ class Pervane < Formula
     (app/"MacOS").mkpath
     cp "#{bin_path}/PervaneApp", app/"MacOS/Pervane"
     cp "Paket/Info.plist", app/"Info.plist"
+    (app/"Resources").install "Paket/Pervane.icns"
     system "codesign", "--force", "--sign", "-", prefix/"Pervane.app"
   end
 
