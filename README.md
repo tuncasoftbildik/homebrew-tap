@@ -3,7 +3,9 @@
 Homebrew formulae by [@tuncasoftbildik](https://github.com/tuncasoftbildik).
 
 ```sh
-brew install tuncasoftbildik/tap/pervane
+brew tap tuncasoftbildik/tap
+brew trust tuncasoftbildik/tap   # Homebrew 7+
+brew install pervane
 ```
 
 | Formula | What |
